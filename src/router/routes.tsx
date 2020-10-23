@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Detail from '../components/detail';
 import History from '../components/history';
-import Home from '../components/home';
+import Search from '../components/search';
 import { IStack, ITab } from './interface';
 
 const renderStack = (stacks: Array<IStack>, Stack: any) => stacks.map((stack: IStack, index: number) => (
@@ -19,7 +19,7 @@ const createStack = (stacks: Array<IStack>) => {
 export const searchStack: Array<IStack> = [
     {
         name: 'Search',
-        component: Home,
+        component: Search,
         options: { title: 'Search' }
     },
     {

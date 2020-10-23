@@ -7,7 +7,6 @@
     "android:build": "sh ./scripts/build_android.sh build_type:debug",
     "android:clean": "sh scripts/clean-android.sh",
     "build": "bash ./scripts/build.sh",
-    "build:watch": "yarn run tsc -- -w",
     "ios:pod": "cd ios && rm Podfile.lock && pod install && cd ..",
     "ios:build": "sh ./scripts/build_ios.sh build_type:debug",
     "start": "react-native start --reset-cache",

@@ -1,0 +1,3 @@
+export const EMPTY_LYRICS_ERROR = 'EMPTY_LYRICS_ERROR';
+export const CLEAN_ERROR = 'CLEAN_ERROR';
+export const CLEAN_LYRICS = 'CLEAN_LYRICS';

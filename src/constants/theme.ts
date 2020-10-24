@@ -2,13 +2,14 @@ import { Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 export const COLORS = {
-    black: '#1E1F20',
-    white: '#FFFFFF',
-    whiteTwo: '#F8F8F8',
-    gray: '#6A6A6A',
-    lightGray: '#e9e9e9',
-    darkGray: '#454545',
-    blue: '#0682FE',
+    black: 'rgba(30, 31, 32, 1)',
+    white: 'rgba(255, 255, 255, 1)',
+    whiteTwo: 'rgba(248, 248, 248, 1)',
+    gray: 'rgba(106, 106, 106, 1)',
+    lightGray: 'rgba(233, 233, 233, 1)',
+    lighterGray: 'rgba(69, 69, 69, 0.7)',
+    darkGray: 'rgba(69, 69, 69, 1)',
+    blue: 'rgba(6, 130, 254, 1)',
 };
 export const SIZES = {
     base: 8,
@@ -29,26 +30,30 @@ export const SIZES = {
     height,
 };
 export const FONTS = {
-    h1: { fontSize: SIZES.h1, lineHeight: 36 },
-    h2: { fontSize: SIZES.h2, lineHeight: 30 },
-    h3: { fontSize: SIZES.h3, lineHeight: 22 },
-    h4: { fontSize: SIZES.h4, lineHeight: 22 },
+    h1: { fontFamily: 'Nunito-Black', fontSize: SIZES.h1, lineHeight: 36 },
+    h2: { fontFamily: 'Nunito-Bold', fontSize: SIZES.h2, lineHeight: 30 },
+    h3: { fontFamily: 'Nunito-Bold', fontSize: SIZES.h3, lineHeight: 22 },
+    h4: { fontFamily: 'Nunito-Bold', fontSize: SIZES.h4, lineHeight: 22 },
     body1: {
+        fontFamily: 'Nunito-Regular',
         fontSize: SIZES.body1,
         lineHeight: 36,
     },
     body2: {
+        fontFamily: 'Nunito-Regular',
         fontSize: SIZES.body2,
         lineHeight: 30,
     },
     body3: {
+        fontFamily: 'Nunito-Regular',
         fontSize: SIZES.body3,
         lineHeight: 22,
     },
     body4: {
+        fontFamily: 'Nunito-Regular',
         fontSize: SIZES.body4,
         lineHeight: 22,
-    }
+    },
 };
 
 const appTheme = { COLORS, SIZES, FONTS };

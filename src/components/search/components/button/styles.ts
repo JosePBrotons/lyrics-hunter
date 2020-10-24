@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     },
 
     btnText: {
-        ...FONTS.body3,
+        ...FONTS.h3,
         color: COLORS.white,
     },
     disabled: {

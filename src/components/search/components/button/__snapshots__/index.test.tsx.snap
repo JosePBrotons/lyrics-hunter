@@ -3,7 +3,7 @@
 exports[`renders button component correctly 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -14,7 +14,7 @@ exports[`renders button component correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#0682FE",
+      "backgroundColor": "rgba(6, 130, 254, 1)",
       "borderRadius": 5,
       "height": 40,
       "justifyContent": "center",
@@ -28,7 +28,8 @@ exports[`renders button component correctly 1`] = `
   <Text
     style={
       Object {
-        "color": "#FFFFFF",
+        "color": "rgba(255, 255, 255, 1)",
+        "fontFamily": "Nunito-Bold",
         "fontSize": 16,
         "lineHeight": 22,
       }

@@ -5,12 +5,14 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { tabs } from './routes';
 import { IScreenOptions, ITab, ITabIconProps } from './interface';
 import { COLORS } from '../constants';
+import { FONTS } from '../constants/theme';
 
 const Tab = createBottomTabNavigator();
 
 const tabBarOptions = {
     activeTintColor: COLORS.blue,
-    inactiveTintColor: COLORS.gray
+    inactiveTintColor: COLORS.gray,
+    labelStyle: { fontFamily: FONTS.h3.fontFamily }
 }
 
 const renderTabs = tabs.map((tab: ITab, index: number) => (

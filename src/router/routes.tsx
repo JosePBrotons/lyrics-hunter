@@ -4,6 +4,9 @@ import Detail from '../components/detail';
 import History from '../components/history';
 import Search from '../components/search';
 import { IStack, ITab } from './interface';
+import { FONTS } from '../constants/theme';
+
+const headerTitleStyle = FONTS.h2;
 
 const renderStack = (stacks: Array<IStack>, Stack: any) => stacks.map((stack: IStack, index: number) => (
     <Stack.Screen key={`stack-${index}`} {...stack} />
@@ -20,12 +23,12 @@ export const searchStack: Array<IStack> = [
     {
         name: 'Search',
         component: Search,
-        options: { title: 'Search' }
+        options: { title: 'Search', headerTitleStyle }
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Detail' }
+        options: { title: 'Lyrics', headerTitleStyle }
     }
 ]
 
@@ -33,12 +36,12 @@ export const historyStack: Array<IStack> = [
     {
         name: 'History',
         component: History,
-        options: { title: 'History' }
+        options: { title: 'History', headerTitleStyle }
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Detail' }
+        options: { title: 'Lyrics', headerTitleStyle }
     }
 ]
 

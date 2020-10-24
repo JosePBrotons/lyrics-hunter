@@ -1,11 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
-      "backgroundColor": "#e9e9e9",
+      "backgroundColor": "rgba(233, 233, 233, 1)",
       "flex": 1,
       "flexDirection": "column",
       "paddingHorizontal": 16,
@@ -16,8 +15,8 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flex": 1,
-        "paddingTop": 20,
+        "flex": 2,
+        "justifyContent": "center",
       }
     }
   >
@@ -25,13 +24,11 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#F8F8F8",
+          "backgroundColor": "rgba(248, 248, 248, 1)",
           "borderRadius": 5,
-          "color": "#454545",
+          "color": "rgba(69, 69, 69, 1)",
           "flexDirection": "row",
-          "fontSize": 14,
           "height": 40,
-          "lineHeight": 22,
           "marginBottom": 20,
           "paddingHorizontal": 10,
           "width": "80%",
@@ -43,62 +40,7 @@ exports[`renders correctly 1`] = `
         style={
           Array [
             Object {
-              "color": "#6A6A6A",
-              "fontSize": 16,
-            },
-            undefined,
-            Object {
-              "fontFamily": "FontAwesome",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-      >
-        
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        onChangeText={[Function]}
-        placeholder="Artist"
-        placeholderTextColor="#6A6A6A"
-        rejectResponderTermination={true}
-        secureTextEntry={false}
-        style={
-          Object {
-            "color": "#454545",
-            "flex": 1,
-            "paddingLeft": 8,
-          }
-        }
-        underlineColorAndroid="transparent"
-        value=""
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#F8F8F8",
-          "borderRadius": 5,
-          "color": "#454545",
-          "flexDirection": "row",
-          "fontSize": 14,
-          "height": 40,
-          "lineHeight": 22,
-          "marginBottom": 20,
-          "paddingHorizontal": 10,
-          "width": "80%",
-        }
-      }
-    >
-      <Text
-        allowFontScaling={false}
-        style={
-          Array [
-            Object {
-              "color": "#6A6A6A",
+              "color": "rgba(106, 106, 106, 1)",
               "fontSize": 16,
             },
             undefined,
@@ -117,13 +59,72 @@ exports[`renders correctly 1`] = `
         allowFontScaling={true}
         onChangeText={[Function]}
         placeholder="Song"
-        placeholderTextColor="#6A6A6A"
+        placeholderTextColor="rgba(106, 106, 106, 1)"
         rejectResponderTermination={true}
         secureTextEntry={false}
         style={
           Object {
-            "color": "#454545",
+            "color": "rgba(69, 69, 69, 1)",
             "flex": 1,
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
+            "paddingLeft": 8,
+          }
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(248, 248, 248, 1)",
+          "borderRadius": 5,
+          "color": "rgba(69, 69, 69, 1)",
+          "flexDirection": "row",
+          "height": 40,
+          "marginBottom": 20,
+          "paddingHorizontal": 10,
+          "width": "80%",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "rgba(106, 106, 106, 1)",
+              "fontSize": 16,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        onChangeText={[Function]}
+        placeholder="Artist"
+        placeholderTextColor="rgba(106, 106, 106, 1)"
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "flex": 1,
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
             "paddingLeft": 8,
           }
         }
@@ -133,7 +134,7 @@ exports[`renders correctly 1`] = `
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -144,7 +145,7 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "backgroundColor": "#0682FE",
+          "backgroundColor": "rgba(6, 130, 254, 1)",
           "borderRadius": 5,
           "height": 40,
           "justifyContent": "center",
@@ -158,7 +159,8 @@ exports[`renders correctly 1`] = `
       <Text
         style={
           Object {
-            "color": "#FFFFFF",
+            "color": "rgba(255, 255, 255, 1)",
+            "fontFamily": "Nunito-Bold",
             "fontSize": 16,
             "lineHeight": 22,
           }
@@ -168,5 +170,5 @@ exports[`renders correctly 1`] = `
       </Text>
     </View>
   </View>
-</RCTSafeAreaView>
+</View>
 `;

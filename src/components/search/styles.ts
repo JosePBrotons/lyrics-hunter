@@ -8,11 +8,20 @@ export const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: COLORS.lightGray,
-        paddingHorizontal: 16
+        paddingHorizontal: 16,
     },
     formContainer: {
-        flex: 1,
+        flex: 2,
         alignItems: 'center',
-        paddingTop: 20
+        justifyContent: 'center'
+    },
+    latestSearchedContainer: {
+        flex: 3,
+        alignItems: 'center'
+    },
+    latestSearchedTitle: {
+        ...FONTS.h2,
+        alignSelf: 'flex-start',
+        color: COLORS.darkGray
     }
 });

@@ -2,6 +2,7 @@ import { RouteProp } from '@react-navigation/native';
 
 export interface IOptions {
     title: string;
+    headerTitleStyle?: IHeaderTitleStyle;
 }
 
 export interface IStack {
@@ -14,6 +15,10 @@ export interface ITabIconProps {
     focused: boolean;
     color: string;
     size: number;
+}
+
+export interface IHeaderTitleStyle {
+    fontFamily: string;
 }
 
 export interface IScreenOptions {

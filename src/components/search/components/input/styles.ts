@@ -5,7 +5,6 @@ const { COLORS, FONTS } = theme;
 
 export const styles = StyleSheet.create({
     inputView: {
-        ...FONTS.body4,
         width: '80%',
         backgroundColor: COLORS.whiteTwo,
         borderRadius: 5,
@@ -17,6 +16,7 @@ export const styles = StyleSheet.create({
         color: COLORS.darkGray,
     },
     inputText: {
+        ...FONTS.body4,
         paddingLeft: 8,
         flex: 1,
         color: COLORS.darkGray,

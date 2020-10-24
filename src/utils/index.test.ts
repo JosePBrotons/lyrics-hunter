@@ -1,4 +1,4 @@
-import { isString, isBlank, isSafeDataType } from '.';
+import { isString, isBlank, isSafeDataType, firstString, isArrayLength, lastString } from '.';
 
 describe('Suite test to isString() function', () => {
     test('Check if an object is a string', () => {
@@ -56,6 +56,54 @@ describe('Suite test utilities for isBlank() function', () => {
     })
 })
 
+describe('Suite test utilities for firstString() function', () => {
+    test('Get first character of a string', () => {
+        const strToCheck = 'Lyrics'
+        const expected = 'L'
+        expect(firstString(strToCheck, 1)).toEqual(expected)
+    })
+    test('Get the firsts six characters of a string', () => {
+        const strToCheck = 'Lyrics'
+        const expected = 'Lyric'
+        expect(firstString(strToCheck, 5)).toEqual(expected)
+    })
+    test('Get the first character of a null value', () => {
+        const strToCheck = null
+        const expected = ''
+        expect(firstString(strToCheck, 1)).toEqual(expected)
+    })
+    test('Get the first character of an undefined value', () => {
+        const strToCheck = undefined
+        const expected = ''
+        expect(firstString(strToCheck, 1)).toEqual(expected)
+    })
+})
+
+describe('Suite test lastString() function', () => {
+    test('Get the last 8 characters of a string', () => {
+        const creditStr = 'Viva la vida - Coldplay'
+        const charQuantity = 8
+        const expected = 'Coldplay'
+        expect(lastString(creditStr, charQuantity)).toEqual(expected)
+    })
+    test('Get the last four characters of a string', () => {
+        const strToCheck = 'Lyrics'
+        const charQuantity = 4
+        const expected = 'rics'
+        expect(lastString(strToCheck, charQuantity)).toEqual(expected)
+    })
+    test('Get the last character of a null value', () => {
+        const strToCheck = null
+        const expected = ''
+        expect(lastString(strToCheck, 1)).toEqual(expected)
+    })
+    test('Get the last character of an undefined value', () => {
+        const strToCheck = undefined
+        const expected = ''
+        expect(lastString(strToCheck, 1)).toEqual(expected)
+    })
+})
+
 describe('Suite test for isSafeDataType() function', () => {
     test('Check if a number value is a safe data type', () => {
         const numToCheck = 12
@@ -86,5 +134,56 @@ describe('Suite test for isSafeDataType() function', () => {
         const dataToCheck = undefined
         const expected = false
         expect(isSafeDataType(dataToCheck)).toEqual(expected)
+    })
+})
+
+describe('Suite test utilities for isArrayLength() function', () => {
+    test('Check if one array value has greater than a number value', () => {
+        const a = [1, 2, 3]
+        const b = 3
+        const expected = false
+        expect(isArrayLength(a, 'greater', b)).toEqual(expected)
+    })
+    test('Check if one array value has lower than a number value', () => {
+        const a = [1, 2]
+        const b = 3
+        const expected = true
+        expect(isArrayLength(a, 'lower', b)).toEqual(expected)
+    })
+    test('Check if one array value is equal than the given number value', () => {
+        const a = [1, 2]
+        const b = 2
+        const expected = true
+        expect(isArrayLength(a, 'equal', b)).toEqual(expected)
+    })
+    test('Check if one array value is lower or equal than the given number value', () => {
+        const a = [1, 2]
+        const b = 1
+        const expected = false
+        expect(isArrayLength(a, 'lowOrEq', b)).toEqual(expected)
+    })
+    test('Check if one array value is greater or equal than the given number value', () => {
+        const a = [1, 2]
+        const b = 1
+        const expected = true
+        expect(isArrayLength(a, 'greatOrEq', b)).toEqual(expected)
+    })
+    test('Check if a null value is lower or equal than the given number value', () => {
+        const a = null
+        const b = 1
+        const expected = false
+        expect(isArrayLength(a, 'greater', b)).toEqual(expected)
+    })
+    test('Check if an undefined value is lower or equal than the given number value', () => {
+        const a = undefined
+        const b = 1
+        const expected = false
+        expect(isArrayLength(a, 'equal', b)).toEqual(expected)
+    })
+    test('Check if a misspelled condition is equal to the given number value', () => {
+        const a = [1, 2]
+        const b = 1
+        const expected = false
+        expect(isArrayLength(a, 'eqal', b)).toEqual(expected)
     })
 })

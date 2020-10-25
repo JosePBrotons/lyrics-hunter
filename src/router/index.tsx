@@ -12,6 +12,7 @@ const Tab = createBottomTabNavigator();
 const tabBarOptions = {
     activeTintColor: COLORS.blue,
     inactiveTintColor: COLORS.gray,
+    keyboardHidesTabBar: true,
     labelStyle: { fontFamily: FONTS.h3.fontFamily }
 }
 

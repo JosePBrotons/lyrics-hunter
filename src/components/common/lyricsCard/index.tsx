@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { firstString } from './../../../../utils';
+import { firstString } from './../../../utils';
 import { ILyricsCardProps } from './interface';
 import { styles } from './styles';
 

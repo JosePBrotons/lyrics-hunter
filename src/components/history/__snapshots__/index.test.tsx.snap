@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders history component correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(233, 233, 233, 1)",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "paddingHorizontal": 16,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/lyrics.png",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "marginBottom": 15,
+        "width": 200,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "rgba(69, 69, 69, 1)",
+        "fontFamily": "Nunito-Bold",
+        "fontSize": 22,
+        "lineHeight": 30,
+        "textAlign": "center",
+      }
+    }
+  >
+    There's nothing in your search history, start your first search by tapping the search option
+  </Text>
+</View>
+`;

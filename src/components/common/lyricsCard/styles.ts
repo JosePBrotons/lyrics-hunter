@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { theme } from '../../../../constants';
+import { theme } from './../../../constants';
 
 const { COLORS, FONTS } = theme;
 
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
         padding: 16,
         width: '100%',
-        marginVertical: 15
+        marginTop: 15
     },
     artistLabel: {
         ...FONTS.h4,

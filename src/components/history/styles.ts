@@ -10,19 +10,22 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.lightGray,
         paddingHorizontal: 16
     },
-    formContainer: {
-        flex: 2,
+    imageContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: COLORS.lightGray,
+        paddingHorizontal: 16,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginVertical: 20
+        justifyContent: 'center'
     },
-    latestSearchedContainer: {
-        flex: 3,
-        alignItems: 'center'
+    image: {
+        height: 200,
+        width: 200,
+        marginBottom: 15
     },
-    latestSearchedTitle: {
+    emptyText: {
         ...FONTS.h2,
-        alignSelf: 'flex-start',
-        color: COLORS.darkGray
+        color: COLORS.darkGray,
+        textAlign: 'center'
     }
 });

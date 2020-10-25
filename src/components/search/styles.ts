@@ -8,13 +8,13 @@ export const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         backgroundColor: COLORS.lightGray,
-        paddingHorizontal: 16,
+        paddingHorizontal: 16
     },
     formContainer: {
         flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 15
+        marginVertical: 20
     },
     latestSearchedContainer: {
         flex: 3,

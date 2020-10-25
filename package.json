@@ -5,7 +5,7 @@
   "author": "Jose Pablo Brotons R <me@josepbrotons.com>",
   "scripts": {
     "android:build": "sh ./scripts/build_android.sh build_type:debug",
-    "android:clean": "sh scripts/clean-android.sh",
+    "android:clean": "sh scripts/clean_android.sh",
     "build": "bash ./scripts/build.sh",
     "ios:pod": "cd ios && rm Podfile.lock && pod install && cd ..",
     "ios:build": "sh ./scripts/build_ios.sh build_type:debug",

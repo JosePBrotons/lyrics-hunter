@@ -1,12 +1,21 @@
-import React from 'react';
-import { TouchableHighlight, SafeAreaView, Text } from 'react-native';
+import React, { useEffect } from 'react';
+import { ScrollView, View, Text } from 'react-native';
+import { styles } from './styles';
+import { IDetailProps } from './interface';
 
-const Detail = () => {
-    return <SafeAreaView>
-        <TouchableHighlight>
-            <Text>{'Buscar'}</Text>
-        </TouchableHighlight>
-    </SafeAreaView>
+const Detail = (props: IDetailProps) => {
+    const { route = {}, navigation = null } = { ...props }
+    const { params = {} } = { ...route }
+    const { artist = '', song = '', lyrics = '' } = { ...params }
+    useEffect(() => {
+        !!navigation && navigation.setOptions({ title: `${song}` })
+    }, [])
+    return <ScrollView style={styles.container}>
+        <View style={styles.lyricsContainer}>
+            <Text style={styles.title}>{`Artist: ${artist}`}</Text>
+            <Text style={styles.lyrics}>{lyrics}</Text>
+        </View>
+    </ScrollView>
 }
 
 export default Detail

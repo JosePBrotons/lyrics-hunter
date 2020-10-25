@@ -59,7 +59,7 @@ exports[`renders lyrics card component correctly 1`] = `
       }
     }
   >
-    I used to rule the world Seas ...
+    I used to rule the world Seas would rise...
   </Text>
 </View>
 `;

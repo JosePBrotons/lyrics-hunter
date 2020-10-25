@@ -17,6 +17,7 @@ exports[`renders correctly 1`] = `
         "alignItems": "center",
         "flex": 2,
         "justifyContent": "center",
+        "marginVertical": 15,
       }
     }
   >

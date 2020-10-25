@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
     formContainer: {
         flex: 2,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginVertical: 15
     },
     latestSearchedContainer: {
         flex: 3,

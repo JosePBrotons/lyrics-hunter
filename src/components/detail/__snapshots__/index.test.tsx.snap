@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "rgba(233, 233, 233, 1)",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingHorizontal": 16,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 22,
+            "lineHeight": 30,
+            "marginVertical": 20,
+            "textAlign": "center",
+          }
+        }
+      >
+        Artist: Coldplay
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(106, 106, 106, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 16,
+            "lineHeight": 22,
+            "textAlign": "center",
+          }
+        }
+      >
+        I used to rule the world...
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

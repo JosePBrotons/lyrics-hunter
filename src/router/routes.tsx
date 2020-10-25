@@ -14,7 +14,7 @@ const renderStack = (stacks: Array<IStack>, Stack: any) => stacks.map((stack: IS
 
 const createStack = (stacks: Array<IStack>) => {
     const Stack = createStackNavigator();
-    return () => <Stack.Navigator>
+    return () => <Stack.Navigator screenOptions={{ headerTitleStyle }}>
         {renderStack(stacks, Stack)}
     </Stack.Navigator>
 }
@@ -23,12 +23,12 @@ export const searchStack: Array<IStack> = [
     {
         name: 'Search',
         component: Search,
-        options: { title: 'Search', headerTitleStyle }
+        options: { title: 'Search' }
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Lyrics', headerTitleStyle }
+        options: { title: 'Lyrics' }
     }
 ]
 
@@ -36,12 +36,12 @@ export const historyStack: Array<IStack> = [
     {
         name: 'History',
         component: History,
-        options: { title: 'History', headerTitleStyle }
+        options: { title: 'History' }
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Lyrics', headerTitleStyle }
+        options: { title: 'Lyrics' }
     }
 ]
 

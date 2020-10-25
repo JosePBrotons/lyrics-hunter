@@ -5,14 +5,15 @@ import { getData, isArrayLength, isBlank, storeData } from './../../utils';
 import Button from './components/button';
 import Input from './components/input';
 import { styles } from './styles';
-import LyricsCard from './components/lyricsCard';
+import LyricsCard from './../common/lyricsCard';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { FETCH_LYRICS } from './api';
 import { useAppContext } from './../../hooks';
 import Loading from '../common/loading';
-import { CLEAN_ERROR, CLEAN_LYRICS } from '../../context/flux/types/behavior';
+import { CLEAN_ERROR, CLEAN_LYRICS } from './../../context/flux/types/behavior';
 import Modal from '../common/modal';
 import { ILatestSearch, ISearchProps } from './interface';
+import { useNetInfo } from '@react-native-community/netinfo';
 
 const DETAIL_SCREEN: string = 'Detail';
 
@@ -68,8 +69,8 @@ const renderErrorModal = (error: any, dispatch: any) => {
 }
 
 const renderSearchForm = (song: string, artist: string, setSong: React.Dispatch<React.SetStateAction<string>>,
-    setArtist: React.Dispatch<React.SetStateAction<string>>, dispatch: React.Dispatch<any>) => {
-    const isDisabled: boolean = isBlank(artist) || isBlank(song)
+    setArtist: React.Dispatch<React.SetStateAction<string>>, dispatch: React.Dispatch<any>, isConnected: boolean) => {
+    const isDisabled: boolean = isBlank(artist) || isBlank(song) || !isConnected
     return <View style={styles.formContainer}>
         <Input placeholder={'Song'} value={song} placeholderTextColor={COLORS.gray} onChangeText={onChangeValues(setSong)} iconName={'music'} />
         <Input placeholder={'Artist'} value={artist} placeholderTextColor={COLORS.gray} onChangeText={onChangeValues(setArtist)} iconName={'user'} />
@@ -84,6 +85,7 @@ const Search = (props: ISearchProps) => {
     const [latestSearch, setLatestSearch] = useState(null);
     const [state, dispatch] = useAppContext()
     const { loading = false, lyrics = '', error = null } = { ...state }
+    const { isConnected = false } = useNetInfo();
     useEffect(() => {
         getRecentSearches(setLatestSearch);
     }, []);
@@ -93,7 +95,7 @@ const Search = (props: ISearchProps) => {
     return <View style={styles.container}>
         {renderErrorModal(error, dispatch)}
         {renderLoading(loading)}
-        {renderSearchForm(song, artist, setSong, setArtist, dispatch)}
+        {renderSearchForm(song, artist, setSong, setArtist, dispatch, isConnected)}
         {renderLatestSearch(navigation, latestSearch)}
     </View>
 }

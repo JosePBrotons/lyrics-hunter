@@ -27,10 +27,9 @@ const onTapSearch = (dispatch: React.Dispatch<any>, artist: string, song: string
 const getRecentSearches = async (setLatestSearch: React.Dispatch<React.SetStateAction<null>>) => {
     const recentSearches = await getData(SAVED_SEARCHES);
     if (isArrayLength(recentSearches, 'greater', 0)) {
-        const [latestSearch = null] = recentSearches
+        const latestSearch = [...recentSearches].pop()
         setLatestSearch(latestSearch);
     }
-    setLatestSearch(null)
 }
 
 const goToDetail = async (artist: string, song: string, lyrics: string, navigation: any, setLatestSearch: React.Dispatch<React.SetStateAction<null>>, dispatch: any) => {

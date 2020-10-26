@@ -17,7 +17,7 @@ const lyricsSuccess = (state: any, payload: any) => {
     const loading = false;
     const error = {
         title: 'Something went wrong',
-        message: 'No lyrics were fetched at this moment, try again later'
+        message: 'No lyrics were fetched at this moment, try again later',
     };
     return { ...state, lyrics, loading, error: isBlank(lyrics) ? error : null };
 };

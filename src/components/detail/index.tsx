@@ -4,18 +4,20 @@ import { styles } from './styles';
 import { IDetailProps } from './interface';
 
 const Detail = (props: IDetailProps) => {
-    const { route = {}, navigation = null } = { ...props }
-    const { params = {} } = { ...route }
-    const { artist = '', song = '', lyrics = '' } = { ...params }
+    const { route = {}, navigation = null } = { ...props };
+    const { params = {} } = { ...route };
+    const { artist = '', song = '', lyrics = '' } = { ...params };
     useEffect(() => {
-        !!navigation && navigation.setOptions({ title: `${song}` })
-    }, [])
-    return <ScrollView style={styles.container}>
-        <View style={styles.lyricsContainer}>
-            <Text style={styles.title}>{`Artist: ${artist}`}</Text>
-            <Text style={styles.lyrics}>{lyrics}</Text>
-        </View>
-    </ScrollView>
-}
+        !!navigation && navigation.setOptions({ title: `${song}` });
+    }, []);
+    return (
+        <ScrollView style={styles.container}>
+            <View style={styles.lyricsContainer}>
+                <Text style={styles.title}>{`Artist: ${artist}`}</Text>
+                <Text style={styles.lyrics}>{lyrics}</Text>
+            </View>
+        </ScrollView>
+    );
+};
 
-export default Detail
+export default Detail;

@@ -5,18 +5,20 @@ import { IModalProps } from './interface';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Modal = (props: IModalProps) => {
-    const { title = '', message = '', onPress = () => null } = { ...props }
-    return <View style={styles.container}>
-        <View style={styles.modalContainer}>
-            <View style={styles.messageContainer}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.message}>{message}</Text>
+    const { title = '', message = '', onPress = () => null } = { ...props };
+    return (
+        <View style={styles.container}>
+            <View style={styles.modalContainer}>
+                <View style={styles.messageContainer}>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.message}>{message}</Text>
+                </View>
+                <TouchableOpacity style={styles.btnContainer} onPress={onPress}>
+                    <Text style={styles.ok}>{'OK'}</Text>
+                </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.btnContainer} onPress={onPress}>
-                <Text style={styles.ok}>{'OK'}</Text>
-            </TouchableOpacity>
         </View>
-    </View>
-}
+    );
+};
 
 export default Modal;

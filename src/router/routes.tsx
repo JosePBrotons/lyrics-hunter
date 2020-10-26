@@ -8,52 +8,55 @@ import { FONTS } from '../constants/theme';
 
 const headerTitleStyle = FONTS.h2;
 
-const renderStack = (stacks: Array<IStack>, Stack: any) => stacks.map((stack: IStack, index: number) => (
-    <Stack.Screen key={`stack-${index}`} {...stack} />
-));
+const renderStack = (stacks: Array<IStack>, Stack: any) =>
+    stacks.map((stack: IStack, index: number) => (
+        <Stack.Screen key={`stack-${index}`} {...stack} />
+    ));
 
 const createStack = (stacks: Array<IStack>) => {
     const Stack = createStackNavigator();
-    return () => <Stack.Navigator screenOptions={{ headerTitleStyle }}>
-        {renderStack(stacks, Stack)}
-    </Stack.Navigator>
-}
+    return () => (
+        <Stack.Navigator screenOptions={{ headerTitleStyle }}>
+            {renderStack(stacks, Stack)}
+        </Stack.Navigator>
+    );
+};
 
 export const searchStack: Array<IStack> = [
     {
         name: 'Search',
         component: Search,
-        options: { title: 'Search' }
+        options: { title: 'Search' },
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Lyrics' }
-    }
-]
+        options: { title: 'Lyrics' },
+    },
+];
 
 export const historyStack: Array<IStack> = [
     {
         name: 'History',
         component: History,
-        options: { title: 'History' }
+        options: { title: 'History' },
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: 'Lyrics' }
-    }
-]
+        options: { title: 'Lyrics' },
+    },
+];
 
 export const tabs: Array<ITab> = [
     {
         name: 'Search',
         component: createStack(searchStack),
-        options: { title: 'Search' }
+        options: { title: 'Search' },
     },
     {
         name: 'History',
         component: createStack(historyStack),
-        options: { title: 'History' }
-    }
+        options: { title: 'History' },
+    },
 ];

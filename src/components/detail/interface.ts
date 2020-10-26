@@ -4,7 +4,7 @@ export interface IDetailProps {
 }
 
 export interface INavigation {
-    setOptions: (arg0: IOptions) => void
+    setOptions: (arg0: IOptions) => void;
 }
 
 export interface IRoute {
@@ -18,5 +18,5 @@ export interface IRouteParams {
 }
 
 export interface IOptions {
-    title: string
+    title: string;
 }

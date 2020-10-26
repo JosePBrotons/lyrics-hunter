@@ -20,6 +20,6 @@ export const styles = StyleSheet.create({
         color: COLORS.white,
     },
     disabled: {
-        opacity: 0.5
-    }
+        opacity: 0.5,
+    },
 });

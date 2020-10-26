@@ -7,22 +7,22 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: COLORS.lightGray
+        backgroundColor: COLORS.lightGray,
     },
     lyricsContainer: {
         paddingVertical: 10,
         paddingHorizontal: 16,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     title: {
         ...FONTS.h2,
         textAlign: 'center',
         color: COLORS.darkGray,
-        marginVertical: 20
+        marginVertical: 20,
     },
     lyrics: {
         ...FONTS.body3,
         color: COLORS.gray,
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+    },
 });

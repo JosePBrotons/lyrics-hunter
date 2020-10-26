@@ -1,7 +1,15 @@
 import { cleanError, cleanLyrics, emptyLyrics } from './actions/behavior';
 import { fetchData, lyricsFailure, lyricsSuccess } from './actions/request';
-import { CLEAN_ERROR, CLEAN_LYRICS, EMPTY_LYRICS_ERROR } from './types/behavior';
-import { FETCHING_DATA, FETCH_LYRICS_FAILURE, FETCH_LYRICS_SUCCESS } from './types/request';
+import {
+    CLEAN_ERROR,
+    CLEAN_LYRICS,
+    EMPTY_LYRICS_ERROR,
+} from './types/behavior';
+import {
+    FETCHING_DATA,
+    FETCH_LYRICS_FAILURE,
+    FETCH_LYRICS_SUCCESS,
+} from './types/request';
 
 const reducers: any = {
     [FETCHING_DATA]: (state: any, payload: any) => fetchData(state, payload),

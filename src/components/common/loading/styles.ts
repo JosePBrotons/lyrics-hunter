@@ -13,6 +13,6 @@ export const styles = StyleSheet.create({
         right: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 100
-    }
+        zIndex: 100,
+    },
 });

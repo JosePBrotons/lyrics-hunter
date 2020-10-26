@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
     messageContainer: {
         flexDirection: 'column',
         padding: 10,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     btnContainer: {
         flexDirection: 'row',
@@ -34,21 +34,21 @@ export const styles = StyleSheet.create({
         borderTopColor: COLORS.lightGray,
         alignItems: 'center',
         justifyContent: 'center',
-        borderTopWidth: 0.5
+        borderTopWidth: 0.5,
     },
     title: {
         ...FONTS.h3,
-        color: COLORS.black
+        color: COLORS.black,
     },
     message: {
         ...FONTS.body3,
         color: COLORS.darkGray,
-        marginVertical: 15
+        marginVertical: 15,
     },
     ok: {
         ...FONTS.h4,
         color: COLORS.blue,
         textAlign: 'center',
-        width: '100%'
-    }
+        width: '100%',
+    },
 });

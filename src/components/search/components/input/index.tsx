@@ -6,10 +6,20 @@ import { IInputProps } from './interface';
 import { styles } from './styles';
 
 const renderIcon = (iconName: string, color: ColorValue) => {
-    return !isBlank(iconName) && <FontAwesome name={iconName} size={styles.icon.fontSize} color={(color)} />
-}
+    return (
+        !isBlank(iconName) && (
+            <FontAwesome
+                name={iconName}
+                size={styles.icon.fontSize}
+                color={color}
+            />
+        )
+    );
+};
 
-const changeTextEvent = (onChangeText: ((text: string) => void)) => (text: string) => onChangeText(text);
+const changeTextEvent = (onChangeText: (text: string) => void) => (
+    text: string
+) => onChangeText(text);
 
 const Input = (props: IInputProps) => {
     const {
@@ -18,7 +28,7 @@ const Input = (props: IInputProps) => {
         onChangeText,
         placeholderTextColor,
         secureTextEntry = false,
-        iconName = ''
+        iconName = '',
     } = {
         ...props,
     };
@@ -35,6 +45,6 @@ const Input = (props: IInputProps) => {
             />
         </View>
     );
-}
+};
 
 export default Input;

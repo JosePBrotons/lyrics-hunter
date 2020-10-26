@@ -7,12 +7,15 @@
     "android:build": "sh ./scripts/build_android.sh build_type:debug",
     "android:clean": "sh scripts/clean_android.sh",
     "build": "bash ./scripts/build.sh",
+    "fix": "yarn prettier",
     "ios:pod": "cd ios && rm Podfile.lock && pod install && cd ..",
     "ios:build": "sh ./scripts/build_ios.sh build_type:debug",
+    "lint": "yarn prettier-check && yarn tsc",
+    "prettier": "prettier --write \"./**/*.{ts,tsx}\"",
+    "prettier-check": "prettier --check \"./**/*.{ts,tsx}\"",
     "start": "react-native start --reset-cache",
     "tsc": "tsc",
-    "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "test": "jest"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
@@ -46,6 +49,7 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "prettier": "2.1.2",
     "react-test-renderer": "16.13.1",
     "typescript": "^3.8.3"
   },
@@ -59,6 +63,8 @@
       "json",
       "node"
     ],
-    "setupFiles": ["./jest/setup.js"]
+    "setupFiles": [
+      "./jest/setup.js"
+    ]
   }
 }

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer, RouteProp } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Splash from 'rnative-splash';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { tabs } from './routes';
 import { IScreenOptions, ITab, ITabIconProps } from './interface';
@@ -30,6 +31,14 @@ const getTabIconByRouteName = (routeName: string) => {
     return tabIconByRouteName[route as keyof typeof tabIconByRouteName];
 };
 
+const closeSplashScreen = () => {
+    Splash.close({
+        animationType: Splash.animationType.scale,
+        duration: 950,
+        delay: 600,
+      });
+}
+
 const renderTabIcon = (
     route: RouteProp<Record<string, object | undefined>, string>
 ) => {
@@ -47,6 +56,9 @@ const getScreenOptions = (screenOptions: IScreenOptions) => {
 };
 
 const Router = () => {
+    useEffect(() => {
+        closeSplashScreen();
+    }, [])
     return (
         <NavigationContainer>
             <Tab.Navigator

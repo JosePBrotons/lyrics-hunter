@@ -1,4 +1,4 @@
-<div style="display:flex;flex-direction:row;justify-content: center">
+<div style="display:flex;flex-direction:row;justify-content: center;align-items: center">
     <img src="src/assets/img/logo.png" alt="home" height="300" />
 </div>
 
@@ -18,12 +18,14 @@ Lyrics Hunter app fetches the lyrics data from the following [API](https://lyric
     <img src="screenshots/ios/lyrics_hunter_history.png" alt="history" height="300" />
     <img src="screenshots/ios/lyrics_hunter_detail.png" alt="detail" height="300" />
 </div>
+
 ### Android
 <div style="display:flex;flex-direction:row;justify-content: space-between">
     <img src="screenshots/android/lyrics_hunter_home.png" alt="home" height="300" />
     <img src="screenshots/android/lyrics_hunter_history.png" alt="history" height="300" />
     <img src="screenshots/android/lyrics_hunter_detail.png" alt="detail" height="300" />
 </div>
+
 ## Before you begin
 Please make sure you are using the required [tools](https://github.com/JosePBrotons/mobile-dev-tools) before checking this app.
 

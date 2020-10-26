@@ -1,0 +1,28 @@
+{
+    "global": {
+        "search": "Search",
+        "history": "History",
+        "lyrics": "Lyrics",
+        "by": "By",
+        "ok": "Ok",
+        "noConnection": "No connection"
+    },
+    "lyricsSearch": {
+        "artist": "Artist",
+        "song": "Song",
+        "search": "Search",
+        "latestSearch": "Latest search"
+    },
+    "lyricsDetail": {
+        "artist": "Artist"
+    },
+    "history": {
+        "emptyState": "There's nothing in your search history, start your first search by tapping the search option"
+    },
+    "error": {
+        "emptyLyrics": {
+            "title": "Something went wrong",
+            "message": "No lyrics were fetched at this moment, try again later"
+        }
+    }
+}

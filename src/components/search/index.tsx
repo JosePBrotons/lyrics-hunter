@@ -1,5 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Keyboard, ScrollView, Text, View } from 'react-native';
+import I18n from 'i18n-js';
 import { COLORS, SAVED_SEARCHES } from './../../constants';
 import { getData, isArrayLength, isBlank, storeData } from './../../utils';
 import Button from './components/button';
@@ -14,7 +15,7 @@ import { CLEAN_ERROR, CLEAN_LYRICS } from './../../context/flux/types/behavior';
 import Modal from '../common/modal';
 import { ILatestSearch, ISearchProps } from './interface';
 import { useNetInfo } from '@react-native-community/netinfo';
-import { ScrollView } from 'react-native-gesture-handler';
+import ActivityBar from '../common/activityBar';
 
 const DETAIL_SCREEN: string = 'Detail';
 
@@ -29,11 +30,13 @@ const onTapSearch = (
     artist: string,
     song: string
 ) => {
-    return async () =>
+    return async () => {
+        Keyboard.dismiss();
         await dispatch({
             type: FETCHING_DATA,
             payload: { request: FETCH_LYRICS({ artist, song }), dispatch },
         });
+    };
 };
 
 const getRecentSearches = async (
@@ -81,7 +84,7 @@ const renderLatestSearch = (
         !!lyrics && (
             <View style={styles.latestSearchedContainer}>
                 <Text style={styles.latestSearchedTitle}>
-                    {'Latest search'}
+                    {I18n.t('lyricsSearch.latestSearch')}
                 </Text>
                 <LyricsCard
                     artist={artist}
@@ -128,25 +131,36 @@ const renderSearchForm = (
     return (
         <View style={styles.formContainer}>
             <Input
-                placeholder={'Song'}
+                placeholder={I18n.t('lyricsSearch.song')}
                 value={song}
                 placeholderTextColor={COLORS.gray}
                 onChangeText={onChangeValues(setSong)}
                 iconName={'music'}
             />
             <Input
-                placeholder={'Artist'}
+                placeholder={I18n.t('lyricsSearch.artist')}
                 value={artist}
                 placeholderTextColor={COLORS.gray}
                 onChangeText={onChangeValues(setArtist)}
                 iconName={'user'}
             />
             <Button
-                text={'Search'}
+                text={I18n.t('lyricsSearch.search')}
                 disabled={isDisabled}
                 onPress={onTapSearch(dispatch, artist, song)}
             />
         </View>
+    );
+};
+
+const renderActivityBar = (isConnected: boolean) => {
+    return (
+        !isConnected && (
+            <ActivityBar
+                icon={'wifi-off'}
+                text={I18n.t('global.noConnection')}
+            />
+        )
     );
 };
 
@@ -165,23 +179,24 @@ const Search = (props: ISearchProps) => {
         goToDetail(artist, song, lyrics, navigation, setLatestSearch, dispatch);
     }, [lyrics]);
     return (
-        <ScrollView
-            showsVerticalScrollIndicator={false}
-            style={styles.scrollContainer}>
+        <>
+            {renderLoading(loading)}
+            {renderErrorModal(error, dispatch)}
             <View style={styles.container}>
-                {renderErrorModal(error, dispatch)}
-                {renderLoading(loading)}
-                {renderSearchForm(
-                    song,
-                    artist,
-                    setSong,
-                    setArtist,
-                    dispatch,
-                    isConnected
-                )}
-                {renderLatestSearch(navigation, latestSearch)}
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    {renderSearchForm(
+                        song,
+                        artist,
+                        setSong,
+                        setArtist,
+                        dispatch,
+                        isConnected
+                    )}
+                    {renderLatestSearch(navigation, latestSearch)}
+                </ScrollView>
             </View>
-        </ScrollView>
+            {renderActivityBar(isConnected)}
+        </>
     );
 };
 

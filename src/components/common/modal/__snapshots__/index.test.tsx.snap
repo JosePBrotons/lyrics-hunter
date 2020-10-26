@@ -43,6 +43,7 @@ exports[`Renders modal component correctly 1`] = `
             "fontFamily": "Nunito-Bold",
             "fontSize": 16,
             "lineHeight": 22,
+            "textAlign": "center",
           }
         }
       >
@@ -56,6 +57,7 @@ exports[`Renders modal component correctly 1`] = `
             "fontSize": 16,
             "lineHeight": 22,
             "marginVertical": 15,
+            "textAlign": "center",
           }
         }
       >
@@ -96,7 +98,7 @@ exports[`Renders modal component correctly 1`] = `
             }
           }
         >
-          OK
+          [missing "en.global.ok" translation]
         </Text>
       </View>
     </RNGestureHandlerButton>

@@ -1,3 +1,4 @@
+import I18n from 'i18n-js';
 const cleanLyrics = (state: any) => {
     const lyrics = '';
     return { ...state, lyrics };
@@ -10,8 +11,8 @@ const cleanError = (state: any) => {
 
 const emptyLyrics = (state: any) => {
     const error = {
-        title: 'Something went wrong',
-        message: 'No lyrics were fetched at this moment, try again later',
+        title: I18n.t('error.emptyLyrics.title'),
+        message: I18n.t('error.emptyLyrics.message'),
     };
     return { ...state, error };
 };

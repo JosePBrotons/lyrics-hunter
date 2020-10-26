@@ -38,7 +38,7 @@ exports[`Renders history component correctly 1`] = `
       }
     }
   >
-    There's nothing in your search history, start your first search by tapping the search option
+    [missing "en.history.emptyState" translation]
   </Text>
 </View>
 `;

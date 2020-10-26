@@ -28,6 +28,7 @@
 		9C63136E62F84CD7A24E3945 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAA3A58957314713BE7C4BAB /* Nunito-Bold.ttf */; };
 		A486677F9801419DAE16B91C /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75A9778B3DC940A39B85CA02 /* Nunito-Italic.ttf */; };
 		A8EFA85D48CA6372667EA29C /* libPods-LyricsHunter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9DD351F438F49FD646D6EB /* libPods-LyricsHunter.a */; };
+		AAD9CE47254777AA001AF73F /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD9CE46254777AA001AF73F /* splash.png */; };
 		C1AC277B557D49659FAA268C /* Nunito-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E93A3ED0F6B4C32A9B8465D /* Nunito-ExtraLight.ttf */; };
 		E781BC27930F45C2A9016B84 /* Nunito-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDF801FE7CC946818299FD9D /* Nunito-ExtraLightItalic.ttf */; };
 		E7ADE6DF739B4EABAAC1820F /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68533C6E5A0D48D9880E0D81 /* Nunito-Light.ttf */; };
@@ -85,6 +86,7 @@
 		A604F14C5AD2B91AE5E8B4AC /* Pods-LyricsHunter-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricsHunter-tvOS.release.xcconfig"; path = "Target Support Files/Pods-LyricsHunter-tvOS/Pods-LyricsHunter-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		A7C139DA299D4011B30C94DE /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BlackItalic.ttf"; path = "../src/assets/fonts/Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
 		AAA3A58957314713BE7C4BAB /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../src/assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		AAD9CE46254777AA001AF73F /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		B38E2D7619C9DA050133B569 /* libPods-LyricsHunter-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LyricsHunter-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF0878D117434127BA69A107 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		BFBADFF1D312458D964EDC59 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../src/assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AAD9CE45254777AA001AF73F /* SplashScreenResource */,
 				13B07FAE1A68108700A75B9A /* LyricsHunter */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LyricsHunterTests */,
@@ -245,6 +248,14 @@
 				2D02E4901E0B4A5D006451C7 /* LyricsHunter-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AAD9CE45254777AA001AF73F /* SplashScreenResource */ = {
+			isa = PBXGroup;
+			children = (
+				AAD9CE46254777AA001AF73F /* splash.png */,
+			);
+			path = SplashScreenResource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				E7ADE6DF739B4EABAAC1820F /* Nunito-Light.ttf in Resources */,
 				2C26FCAA6CED42F883D45494 /* Nunito-LightItalic.ttf in Resources */,
 				2438C23E1F8C4ED0A6546DF2 /* Nunito-Regular.ttf in Resources */,
+				AAD9CE47254777AA001AF73F /* splash.png in Resources */,
 				09223841EAB54765A27867E4 /* Nunito-SemiBold.ttf in Resources */,
 				422FA316EB8B4E228B80D877 /* Nunito-SemiBoldItalic.ttf in Resources */,
 			);

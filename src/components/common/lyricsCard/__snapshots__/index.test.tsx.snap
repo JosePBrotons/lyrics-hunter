@@ -16,7 +16,7 @@ exports[`renders lyrics card component correctly 1`] = `
       "backgroundColor": "rgba(255, 255, 255, 1)",
       "borderRadius": 5,
       "flexDirection": "column",
-      "marginVertical": 15,
+      "marginTop": 15,
       "opacity": 1,
       "padding": 16,
       "width": "100%",

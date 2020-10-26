@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
+import I18n from 'i18n-js';
 import { styles } from './styles';
 import LyricsCard from './../common/lyricsCard';
 import { ILyricsCardProps } from './../common/lyricsCard/interface';
@@ -48,10 +49,7 @@ const renderEmptyState = () => {
                 style={styles.image}
                 source={require('./../../assets/img/lyrics.png')}
             />
-            <Text
-                style={
-                    styles.emptyText
-                }>{`There's nothing in your search history, start your first search by tapping the search option`}</Text>
+            <Text style={styles.emptyText}>{I18n.t('history.emptyState')}</Text>
         </View>
     );
 };
@@ -70,6 +68,7 @@ const History = (props: IHistoryProps) => {
                 <FlatList
                     data={history}
                     style={styles.container}
+                    showsVerticalScrollIndicator={false}
                     renderItem={renderHistory(navigation)}
                     keyExtractor={keyExtract}
                 />

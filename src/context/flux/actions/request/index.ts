@@ -1,3 +1,4 @@
+import I18n from 'i18n-js';
 import { getPromise } from './../../../../api';
 import { isBlank } from './../../../../utils';
 
@@ -16,8 +17,8 @@ const lyricsSuccess = (state: any, payload: any) => {
     const { lyrics = null } = { ...payload };
     const loading = false;
     const error = {
-        title: 'Something went wrong',
-        message: 'No lyrics were fetched at this moment, try again later',
+        title: I18n.t('error.emptyLyrics.title'),
+        message: I18n.t('error.emptyLyrics.message'),
     };
     return { ...state, lyrics, loading, error: isBlank(lyrics) ? error : null };
 };

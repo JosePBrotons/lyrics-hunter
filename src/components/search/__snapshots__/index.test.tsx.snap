@@ -1,175 +1,231 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders search component correctly 1`] = `
-<View
-  style={
-    Object {
-      "backgroundColor": "rgba(233, 233, 233, 1)",
-      "flex": 1,
-      "flexDirection": "column",
-      "paddingHorizontal": 16,
+Array [
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+        "paddingHorizontal": 16,
+      }
     }
-  }
->
+  >
+    <RCTScrollView
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 2,
+              "justifyContent": "center",
+              "marginVertical": 20,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
+                "color": "rgba(69, 69, 69, 1)",
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 20,
+                "paddingHorizontal": 10,
+                "width": "80%",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(106, 106, 106, 1)",
+                    "fontSize": 16,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.lyricsSearch.song\\" translation]"
+              placeholderTextColor="rgba(106, 106, 106, 1)"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flex": 1,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 22,
+                  "paddingLeft": 8,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
+                "color": "rgba(69, 69, 69, 1)",
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 20,
+                "paddingHorizontal": 10,
+                "width": "80%",
+              }
+            }
+          >
+            <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(106, 106, 106, 1)",
+                    "fontSize": 16,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.lyricsSearch.artist\\" translation]"
+              placeholderTextColor="rgba(106, 106, 106, 1)"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flex": 1,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 22,
+                  "paddingLeft": 8,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(6, 130, 254, 1)",
+                "borderRadius": 5,
+                "height": 40,
+                "justifyContent": "center",
+                "marginBottom": 10,
+                "marginTop": 5,
+                "opacity": 0.5,
+                "width": "60%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(255, 255, 255, 1)",
+                  "fontFamily": "Nunito-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 22,
+                }
+              }
+            >
+              [missing "en.lyricsSearch.search" translation]
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>,
   <View
     style={
       Object {
         "alignItems": "center",
-        "flex": 2,
+        "backgroundColor": "rgba(69, 69, 69, 0.7)",
+        "bottom": 0,
+        "flexDirection": "row",
+        "height": 40,
         "justifyContent": "center",
-        "marginVertical": 15,
+        "position": "absolute",
+        "width": "100%",
+        "zIndex": 100,
       }
     }
   >
-    <View
+    <Text
+      allowFontScaling={false}
       style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "rgba(248, 248, 248, 1)",
-          "borderRadius": 5,
-          "color": "rgba(69, 69, 69, 1)",
-          "flexDirection": "row",
-          "height": 40,
-          "marginBottom": 20,
-          "paddingHorizontal": 10,
-          "width": "80%",
-        }
-      }
-    >
-      <Text
-        allowFontScaling={false}
-        style={
-          Array [
-            Object {
-              "color": "rgba(106, 106, 106, 1)",
-              "fontSize": 16,
-            },
-            undefined,
-            Object {
-              "fontFamily": "FontAwesome",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-      >
-        
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        onChangeText={[Function]}
-        placeholder="Song"
-        placeholderTextColor="rgba(106, 106, 106, 1)"
-        rejectResponderTermination={true}
-        secureTextEntry={false}
-        style={
-          Object {
-            "color": "rgba(69, 69, 69, 1)",
-            "flex": 1,
-            "fontFamily": "Nunito-Regular",
-            "fontSize": 14,
-            "lineHeight": 22,
-            "paddingLeft": 8,
-          }
-        }
-        underlineColorAndroid="transparent"
-        value=""
-      />
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "rgba(248, 248, 248, 1)",
-          "borderRadius": 5,
-          "color": "rgba(69, 69, 69, 1)",
-          "flexDirection": "row",
-          "height": 40,
-          "marginBottom": 20,
-          "paddingHorizontal": 10,
-          "width": "80%",
-        }
-      }
-    >
-      <Text
-        allowFontScaling={false}
-        style={
-          Array [
-            Object {
-              "color": "rgba(106, 106, 106, 1)",
-              "fontSize": 16,
-            },
-            undefined,
-            Object {
-              "fontFamily": "FontAwesome",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-            Object {},
-          ]
-        }
-      >
-        
-      </Text>
-      <TextInput
-        allowFontScaling={true}
-        onChangeText={[Function]}
-        placeholder="Artist"
-        placeholderTextColor="rgba(106, 106, 106, 1)"
-        rejectResponderTermination={true}
-        secureTextEntry={false}
-        style={
-          Object {
-            "color": "rgba(69, 69, 69, 1)",
-            "flex": 1,
-            "fontFamily": "Nunito-Regular",
-            "fontSize": 14,
-            "lineHeight": 22,
-            "paddingLeft": 8,
-          }
-        }
-        underlineColorAndroid="transparent"
-        value=""
-      />
-    </View>
-    <View
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "rgba(6, 130, 254, 1)",
-          "borderRadius": 5,
-          "height": 40,
-          "justifyContent": "center",
-          "marginBottom": 10,
-          "marginTop": 5,
-          "opacity": 0.5,
-          "width": "60%",
-        }
-      }
-    >
-      <Text
-        style={
+        Array [
           Object {
             "color": "rgba(255, 255, 255, 1)",
-            "fontFamily": "Nunito-Bold",
-            "fontSize": 16,
-            "lineHeight": 22,
-          }
+            "fontSize": 20,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Feather",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, 1)",
+          "fontFamily": "Nunito-Regular",
+          "fontSize": 16,
+          "lineHeight": 22,
+          "marginHorizontal": 10,
         }
-      >
-        Search
-      </Text>
-    </View>
-  </View>
-</View>
+      }
+    >
+      [missing "en.global.noConnection" translation]
+    </Text>
+  </View>,
+]
 `;

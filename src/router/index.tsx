@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { tabs } from './routes';
 import { IScreenOptions, ITab, ITabIconProps } from './interface';
-import { COLORS } from '../constants';
-import { FONTS } from '../constants/theme';
+import { COLORS } from './../constants';
+import { FONTS } from './../constants/theme';
 
 const Tab = createBottomTabNavigator();
 

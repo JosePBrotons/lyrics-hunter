@@ -1,0 +1,28 @@
+{
+    "global": {
+        "search": "Buscar",
+        "history": "Historial",
+        "lyrics": "Letra",
+        "by": "Por",
+        "ok": "Aceptar",
+        "noConnection": "Sin conexión"
+    },
+    "lyricsSearch": {
+        "artist": "Cantante",
+        "song": "Canción",
+        "search": "Buscar",
+        "latestSearch": "Última búsqueda"
+    },
+    "lyricsDetail": {
+        "artist": "Cantante"
+    },
+    "history": {
+        "emptyState": "No hay búsquedas en tu historial, empieza realizando tu primera búsqueda tocando la opción de búsqueda"
+    },
+    "error": {
+        "emptyLyrics": {
+            "title": "Algo salió mal",
+            "message": "No se pudo encontrar la letra de la canción que buscas, intenta de nuevo más tarde"
+        }
+    }
+}

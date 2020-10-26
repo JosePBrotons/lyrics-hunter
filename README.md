@@ -66,6 +66,6 @@ iOS:
 Thanks
 ------
 
-**Jose Brotons** © 2019+<br>
+**Jose Brotons** © 2020
 
 > GitHub [@josepbrotons](https://github.com/JosePBrotons)

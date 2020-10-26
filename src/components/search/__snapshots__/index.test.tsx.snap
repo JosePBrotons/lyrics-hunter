@@ -22,6 +22,20 @@ Array [
         }
       }
     >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/logo.png",
+          }
+        }
+        style={
+          Object {
+            "height": 100,
+            "marginBottom": 20,
+            "width": 130,
+          }
+        }
+      />
       <View
         style={
           Object {

@@ -1,5 +1,5 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
-import { Keyboard, ScrollView, Text, View } from 'react-native';
+import { Image, Keyboard, ScrollView, Text, View } from 'react-native';
 import I18n from 'i18n-js';
 import { COLORS, SAVED_SEARCHES } from './../../constants';
 import { getData, isArrayLength, isBlank, storeData } from './../../utils';
@@ -135,6 +135,7 @@ const renderSearchForm = (
         isBlank(artist) || isBlank(song) || !isConnected;
     return (
         <View style={styles.formContainer}>
+            <Image source={require('./../../assets/img/logo.png')} style={styles.logo} />
             <Input
                 placeholder={I18n.t('lyricsSearch.song')}
                 value={song}

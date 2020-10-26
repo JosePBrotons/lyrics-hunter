@@ -25,10 +25,16 @@ export const styles = StyleSheet.create({
     latestSearchedContainer: {
         flex: 3,
         alignItems: 'center',
+        marginVertical: 10
     },
     latestSearchedTitle: {
         ...FONTS.h2,
         alignSelf: 'flex-start',
         color: COLORS.darkGray,
     },
+    logo: {
+        height: 100,
+        width: 130,
+        marginBottom: 20
+    }
 });

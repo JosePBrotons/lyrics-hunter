@@ -1,5 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
-import { Keyboard, ScrollView, Text, View } from 'react-native';
+import { Image, Keyboard, ScrollView, Text, View } from 'react-native';
+import { useNetInfo } from '@react-native-community/netinfo';
 import I18n from 'i18n-js';
 import { COLORS, SAVED_SEARCHES } from './../../constants';
 import { getData, isArrayLength, isBlank, storeData } from './../../utils';
@@ -14,7 +15,6 @@ import Loading from '../common/loading';
 import { CLEAN_ERROR, CLEAN_LYRICS } from './../../context/flux/types/behavior';
 import Modal from '../common/modal';
 import { ILatestSearch, ISearchProps } from './interface';
-import { useNetInfo } from '@react-native-community/netinfo';
 import ActivityBar from '../common/activityBar';
 
 const DETAIL_SCREEN: string = 'Detail';
@@ -75,6 +75,11 @@ const goToScreen = (navigation: any, screenName: string, data: any) => {
     return () => !!navigate && navigate(screenName, data);
 };
 
+const cleanForm = (setArtist: React.Dispatch<React.SetStateAction<string>>, setSong: React.Dispatch<React.SetStateAction<string>>) => {
+    setArtist('');
+    setSong('');
+}
+
 const renderLatestSearch = (
     navigation: any,
     latestSearch: ILatestSearch | null
@@ -130,6 +135,7 @@ const renderSearchForm = (
         isBlank(artist) || isBlank(song) || !isConnected;
     return (
         <View style={styles.formContainer}>
+            <Image source={require('./../../assets/img/logo.png')} style={styles.logo} />
             <Input
                 placeholder={I18n.t('lyricsSearch.song')}
                 value={song}
@@ -172,29 +178,35 @@ const Search = (props: ISearchProps) => {
     const [state, dispatch] = useAppContext();
     const { loading = false, lyrics = '', error = null } = { ...state };
     const { isConnected = false } = useNetInfo();
+    const searchForm = renderSearchForm(
+        song,
+        artist,
+        setSong,
+        setArtist,
+        dispatch,
+        isConnected
+    );
     useEffect(() => {
         getRecentSearches(setLatestSearch);
     }, []);
     useEffect(() => {
         goToDetail(artist, song, lyrics, navigation, setLatestSearch, dispatch);
+        cleanForm(setArtist, setSong);
     }, [lyrics]);
     return (
         <>
             {renderLoading(loading)}
             {renderErrorModal(error, dispatch)}
-            <View style={styles.container}>
-                <ScrollView showsVerticalScrollIndicator={false}>
-                    {renderSearchForm(
-                        song,
-                        artist,
-                        setSong,
-                        setArtist,
-                        dispatch,
-                        isConnected
-                    )}
+            {!!latestSearch ? (
+                <ScrollView
+                    style={styles.scrollContainer}
+                    showsVerticalScrollIndicator={false}>
+                    {searchForm}
                     {renderLatestSearch(navigation, latestSearch)}
                 </ScrollView>
-            </View>
+            ) : (
+                    <View style={styles.container}>{searchForm}</View>
+                )}
             {renderActivityBar(isConnected)}
         </>
     );

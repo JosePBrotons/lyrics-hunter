@@ -7,6 +7,8 @@
     "android:build": "sh ./scripts/build_android.sh build_type:debug",
     "android:clean": "sh scripts/clean_android.sh",
     "build": "bash ./scripts/build.sh",
+    "clean:rn": "sh scripts/clean_rn.sh",
+    "clean:npm-modules": "sh scripts/clean_npm_odules.sh",
     "fix": "yarn prettier",
     "ios:pod": "cd ios && rm Podfile.lock && pod install && cd ..",
     "ios:build": "sh ./scripts/build_ios.sh build_type:debug",

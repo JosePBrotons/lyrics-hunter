@@ -1,5 +1,5 @@
 <div style="display:flex;flex-direction:row;justify-content: center;align-items: center">
-    <img src="src/assets/img/logo.png" alt="home" height="300" />
+    <img src="src/assets/img/logo.png" alt="logo" height="180" />
 </div>
 
 # Lyrics Hunter

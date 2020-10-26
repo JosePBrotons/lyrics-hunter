@@ -28,6 +28,6 @@ export interface IScreenOptions {
 
 export interface ITab {
     name: string;
-    component: any
+    component: any;
     options?: IOptions;
 }

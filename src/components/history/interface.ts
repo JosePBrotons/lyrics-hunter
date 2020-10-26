@@ -1,3 +1,3 @@
 export interface IHistoryProps {
-    navigation: any
+    navigation: any;
 }

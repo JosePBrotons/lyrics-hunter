@@ -9,10 +9,10 @@ const props: IDetailProps = {
         params: {
             artist: 'Coldplay',
             song: 'Viva La Vida',
-            lyrics: 'I used to rule the world...'
-        }
-    }
-}
+            lyrics: 'I used to rule the world...',
+        },
+    },
+};
 
 test('renders correctly', () => {
     const searchCmp = renderer.create(<Detail {...props} />).toJSON();

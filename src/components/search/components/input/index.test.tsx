@@ -9,7 +9,7 @@ test('renders input component correctly', () => {
         value: 'Coldplay',
         placeholderTextColor: COLORS.lightGray,
         onChangeText: jest.fn,
-        iconName: 'user'
+        iconName: 'user',
     };
     const inputCmp = renderer.create(<Input {...props} />).toJSON();
     expect(inputCmp).toMatchSnapshot();

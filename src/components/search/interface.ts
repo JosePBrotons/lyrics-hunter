@@ -1,9 +1,9 @@
 export interface ISearchProps {
-    navigation: any
+    navigation: any;
 }
 
 export interface ILatestSearch {
-    artist: string,
-    song: string,
-    lyrics: string
+    artist: string;
+    song: string;
+    lyrics: string;
 }

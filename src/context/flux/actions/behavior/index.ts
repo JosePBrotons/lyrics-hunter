@@ -5,13 +5,13 @@ const cleanLyrics = (state: any) => {
 
 const cleanError = (state: any) => {
     const error = null;
-    return { ...state, error }
+    return { ...state, error };
 };
 
 const emptyLyrics = (state: any) => {
     const error = {
         title: 'Something went wrong',
-        message: 'No lyrics were fetched at this moment, try again later'
+        message: 'No lyrics were fetched at this moment, try again later',
     };
     return { ...state, error };
 };

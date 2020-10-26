@@ -1,5 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
 import { Image, Keyboard, ScrollView, Text, View } from 'react-native';
+import { useNetInfo } from '@react-native-community/netinfo';
 import I18n from 'i18n-js';
 import { COLORS, SAVED_SEARCHES } from './../../constants';
 import { getData, isArrayLength, isBlank, storeData } from './../../utils';
@@ -14,7 +15,6 @@ import Loading from '../common/loading';
 import { CLEAN_ERROR, CLEAN_LYRICS } from './../../context/flux/types/behavior';
 import Modal from '../common/modal';
 import { ILatestSearch, ISearchProps } from './interface';
-import { useNetInfo } from '@react-native-community/netinfo';
 import ActivityBar from '../common/activityBar';
 
 const DETAIL_SCREEN: string = 'Detail';

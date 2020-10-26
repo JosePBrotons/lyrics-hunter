@@ -39,13 +39,13 @@ export const styles = StyleSheet.create({
     title: {
         ...FONTS.h3,
         color: COLORS.black,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     message: {
         ...FONTS.body3,
         color: COLORS.darkGray,
         marginVertical: 15,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     ok: {
         ...FONTS.h4,

@@ -75,10 +75,13 @@ const goToScreen = (navigation: any, screenName: string, data: any) => {
     return () => !!navigate && navigate(screenName, data);
 };
 
-const cleanForm = (setArtist: React.Dispatch<React.SetStateAction<string>>, setSong: React.Dispatch<React.SetStateAction<string>>) => {
+const cleanForm = (
+    setArtist: React.Dispatch<React.SetStateAction<string>>,
+    setSong: React.Dispatch<React.SetStateAction<string>>
+) => {
     setArtist('');
     setSong('');
-}
+};
 
 const renderLatestSearch = (
     navigation: any,
@@ -135,7 +138,10 @@ const renderSearchForm = (
         isBlank(artist) || isBlank(song) || !isConnected;
     return (
         <View style={styles.formContainer}>
-            <Image source={require('./../../assets/img/logo.png')} style={styles.logo} />
+            <Image
+                source={require('./../../assets/img/logo.png')}
+                style={styles.logo}
+            />
             <Input
                 placeholder={I18n.t('lyricsSearch.song')}
                 value={song}
@@ -205,8 +211,8 @@ const Search = (props: ISearchProps) => {
                     {renderLatestSearch(navigation, latestSearch)}
                 </ScrollView>
             ) : (
-                    <View style={styles.container}>{searchForm}</View>
-                )}
+                <View style={styles.container}>{searchForm}</View>
+            )}
             {renderActivityBar(isConnected)}
         </>
     );

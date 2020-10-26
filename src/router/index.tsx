@@ -36,8 +36,8 @@ const closeSplashScreen = () => {
         animationType: Splash.animationType.scale,
         duration: 950,
         delay: 600,
-      });
-}
+    });
+};
 
 const renderTabIcon = (
     route: RouteProp<Record<string, object | undefined>, string>
@@ -58,7 +58,7 @@ const getScreenOptions = (screenOptions: IScreenOptions) => {
 const Router = () => {
     useEffect(() => {
         closeSplashScreen();
-    }, [])
+    }, []);
     return (
         <NavigationContainer>
             <Tab.Navigator

@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     latestSearchedContainer: {
         flex: 3,
         alignItems: 'center',
-        marginVertical: 10
+        marginVertical: 10,
     },
     latestSearchedTitle: {
         ...FONTS.h2,
@@ -35,6 +35,6 @@ export const styles = StyleSheet.create({
     logo: {
         height: 100,
         width: 130,
-        marginBottom: 20
-    }
+        marginBottom: 20,
+    },
 });

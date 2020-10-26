@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders loading component correctly 1`] = `
+exports[`Renders ActivityBar component correctly 1`] = `
 <View
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "rgba(106, 106, 106, 1)",
+      "backgroundColor": "rgba(69, 69, 69, 0.7)",
       "bottom": 0,
       "flexDirection": "row",
       "height": 40,

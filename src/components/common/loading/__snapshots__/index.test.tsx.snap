@@ -35,6 +35,7 @@ exports[`Renders loading component correctly 1`] = `
   >
     <View
       autoPlay={true}
+      cacheComposition={true}
       enableMergePathsAndroidForKitKatAndAbove={false}
       forwardedRef={[Function]}
       loop={true}

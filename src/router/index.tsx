@@ -22,13 +22,13 @@ const renderTabs = tabs.map((tab: ITab, index: number) => (
 ));
 
 const getTabIconByRouteName = (routeName: string) => {
-    const tabIconByRouteName = {
+    const tabIconByRouteName: { [key: string]: string } = {
         Search: 'search',
         History: 'history',
         DEFAULT: 'info-circle',
     };
-    const route: string = !!routeName ? routeName : 'DEFAULT';
-    return tabIconByRouteName[route as keyof typeof tabIconByRouteName];
+    const route: string = routeName ?? 'DEFAULT';
+    return tabIconByRouteName[route];
 };
 
 const closeSplashScreen = () => {

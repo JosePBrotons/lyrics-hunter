@@ -10,8 +10,8 @@ if [ "$device_udid" != "" ]; then
 fi
 echo "Running on device: $run_on_device"
 build_config="$(tr '[:lower:]' '[:upper:]' <<< ${build_type:0:1})${build_type:1}"
-yarn run build platform_os:ios build_type:$build_type env:$env
-yarn run ios:pod
+pnpm run build platform_os:ios build_type:$build_type env:$env
+pnpm run ios:pod
 ENVFILE=./.env npx react-native run-ios
 
 echo "build_ios: $build_type - $env"

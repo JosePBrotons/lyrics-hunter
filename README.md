@@ -45,23 +45,23 @@ Please make sure you are using the required [tools](https://github.com/JosePBrot
 To start checking this project please proceed with the scripts bellow:
 
     $ git clone git@github.com:JosePBrotons/lyrics-hunter.git
-    $ yarn install
+    $ pnpm install
 ----
 
 ## Run the app
 To start running the app in debug mode first make sure you start the metro bundler by running this script:
 
-    $ yarn start
+    $ pnpm start
 
 Then execute the following script:
 
 Android: 
 
-    $ yarn android:build env:{environment}
+    $ pnpm android:build env:{environment}
     
 iOS: 
 
-    $ yarn ios:build env:{environment}
+    $ pnpm ios:build env:{environment}
 
 Thanks
 ------

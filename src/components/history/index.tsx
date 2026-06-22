@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FlatList, Image, Text, View } from 'react-native';
-import I18n from 'i18n-js';
+import I18n from '../../i18n';
 import { styles } from './styles';
 import LyricsCard from './../common/lyricsCard';
 import { ILyricsCardProps } from './../common/lyricsCard/interface';

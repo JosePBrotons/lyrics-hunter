@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ScrollView, View, Text } from 'react-native';
-import I18n from 'i18n-js';
+import I18n from '../../i18n';
 import { styles } from './styles';
 import { IDetailProps } from './interface';
 

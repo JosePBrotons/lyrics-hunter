@@ -1,13 +1,16 @@
 #!/bin/bash
 getArguments () {
-    key_value=$1
+    local key_value="$1"
+    local found_value=""
+    local default_value=""
+    local ARGUMENT KEY VALUE
     for ARGUMENT in "$@"
     do
-        KEY=$(echo $ARGUMENT | cut -f1 -d:)
-        VALUE=$(echo $ARGUMENT | cut -f2 -d:)
+        KEY=$(cut -f1 -d: <<<"$ARGUMENT")
+        VALUE=$(cut -f2 -d: <<<"$ARGUMENT")
         if [ "$KEY" = "$key_value" ] && [ "$VALUE" != "$key_value" ]
         then
-            found_value=$VALUE
+            found_value="$VALUE"
         fi
 
     done

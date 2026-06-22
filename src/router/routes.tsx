@@ -1,12 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import I18n from 'i18n-js';
 import Detail from '../components/detail';
 import History from '../components/history';
 import Search from '../components/search';
 import { IStack, ITab } from './interface';
 import { FONTS } from '../constants/theme';
-import { setI18nConfig } from '../i18n';
+import I18n, { setI18nConfig } from '../i18n';
 
 const headerTitleStyle = FONTS.h2;
 

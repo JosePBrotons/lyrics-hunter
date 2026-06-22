@@ -1,3 +1,4 @@
+import React from 'react';
 import { RouteProp } from '@react-navigation/native';
 
 export interface IOptions {
@@ -7,7 +8,7 @@ export interface IOptions {
 
 export interface IStack {
     name: string;
-    component: (props: any) => JSX.Element;
+    component: (props: any) => React.JSX.Element;
     options?: IOptions;
 }
 

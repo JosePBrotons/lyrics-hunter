@@ -17,9 +17,9 @@ const renderIcon = (iconName: string, color: ColorValue) => {
     );
 };
 
-const changeTextEvent = (onChangeText: (text: string) => void) => (
-    text: string
-) => onChangeText(text);
+const changeTextEvent =
+    (onChangeText: (text: string) => void) => (text: string) =>
+        onChangeText(text);
 
 const Input = (props: IInputProps) => {
     const {

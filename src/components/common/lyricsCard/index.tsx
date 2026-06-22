@@ -5,7 +5,12 @@ import { ILyricsCardProps } from './interface';
 import { styles } from './styles';
 
 const LyricsCard = (props: ILyricsCardProps) => {
-    const { artist = '', song = '', lyrics = '', onPress = () => null } = {
+    const {
+        artist = '',
+        song = '',
+        lyrics = '',
+        onPress = () => null,
+    } = {
         ...props,
     };
     const regExp: RegExp = /\r?\n|\r/g;

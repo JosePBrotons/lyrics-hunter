@@ -1,7 +1,7 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
 import { Image, Keyboard, ScrollView, Text, View } from 'react-native';
 import { useNetInfo } from '@react-native-community/netinfo';
-import I18n from 'i18n-js';
+import I18n from '../../i18n';
 import { COLORS, SAVED_SEARCHES } from './../../constants';
 import { getData, isArrayLength, isBlank, storeData } from './../../utils';
 import Button from './components/button';

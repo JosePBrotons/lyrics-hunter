@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer, RouteProp } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Splash from 'rnative-splash';
+import BootSplash from 'react-native-bootsplash';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { tabs } from './routes';
 import { IScreenOptions, ITab, ITabIconProps } from './interface';
@@ -9,13 +9,6 @@ import { COLORS } from './../constants';
 import { FONTS } from './../constants/theme';
 
 const Tab = createBottomTabNavigator();
-
-const tabBarOptions = {
-    activeTintColor: COLORS.blue,
-    inactiveTintColor: COLORS.gray,
-    keyboardHidesTabBar: true,
-    labelStyle: { fontFamily: FONTS.h3.fontFamily },
-};
 
 const renderTabs = tabs.map((tab: ITab, index: number) => (
     <Tab.Screen key={`tab-${index}`} {...tab} />
@@ -32,11 +25,7 @@ const getTabIconByRouteName = (routeName: string) => {
 };
 
 const closeSplashScreen = () => {
-    Splash.close({
-        animationType: Splash.animationType.scale,
-        duration: 950,
-        delay: 600,
-    });
+    BootSplash.hide({ fade: true });
 };
 
 const renderTabIcon = (
@@ -52,7 +41,13 @@ const renderTabIcon = (
 
 const getScreenOptions = (screenOptions: IScreenOptions) => {
     const { route } = { ...screenOptions };
-    return { tabBarIcon: renderTabIcon(route) };
+    return {
+        tabBarActiveTintColor: COLORS.blue,
+        tabBarInactiveTintColor: COLORS.gray,
+        tabBarHideOnKeyboard: true,
+        tabBarLabelStyle: { fontFamily: FONTS.h3.fontFamily },
+        tabBarIcon: renderTabIcon(route),
+    };
 };
 
 const Router = () => {
@@ -61,9 +56,7 @@ const Router = () => {
     }, []);
     return (
         <NavigationContainer>
-            <Tab.Navigator
-                screenOptions={getScreenOptions}
-                tabBarOptions={tabBarOptions}>
+            <Tab.Navigator screenOptions={getScreenOptions}>
                 {renderTabs}
             </Tab.Navigator>
         </NavigationContainer>

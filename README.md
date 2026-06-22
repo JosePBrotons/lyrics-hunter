@@ -29,6 +29,18 @@ Lyrics Hunter app fetches the lyrics data from the following [API](https://lyric
 ## Before you begin
 Please make sure you are using the required [tools](https://github.com/JosePBrotons/mobile-dev-tools) before checking this app.
 
+### Toolchain requirements
+
+This app targets **React Native 0.85** (New Architecture) and needs:
+
+- **Node** >= 22.11
+- **pnpm** (package manager)
+- **JDK 17** — required to build the Android app.
+- **Ruby** >= 3.1 with **Bundler** — required by CocoaPods for the iOS build. Run `bundle install` once, then `bundle exec pod install` from `ios/`.
+- **Xcode 16+** (iOS) and **Android SDK 35** (Android).
+
+Fonts (Nunito + icon sets) are linked into the native projects via [`react-native-asset`](https://www.npmjs.com/package/react-native-asset). If you add or change fonts in `src/assets/fonts`, re-run `npx react-native-asset` to relink them on both platforms.
+
 ## Available Arguments
 
 ### {platform_os}:
@@ -46,6 +58,10 @@ To start checking this project please proceed with the scripts bellow:
 
     $ git clone git@github.com:JosePBrotons/lyrics-hunter.git
     $ pnpm install
+
+For iOS, also install the native pods:
+
+    $ cd ios && bundle install && bundle exec pod install && cd ..
 ----
 
 ## Run the app

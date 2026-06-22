@@ -1,0 +1,9 @@
+# React Native does not support pnpm's default isolated node_modules layout:
+# android/settings.gradle hard-codes ../node_modules/@react-native/gradle-plugin,
+# and several RN tools resolve transitive deps from a flat tree. A hoisted
+# (npm/yarn-style) node_modules makes those paths exist.
+# NOTE: pnpm 10+ reads this from pnpm-workspace.yaml, not .npmrc.
+nodeLinker: hoisted
+
+allowBuilds:
+  sharp: true

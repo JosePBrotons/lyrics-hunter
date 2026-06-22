@@ -20,10 +20,12 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+*.xcode.env.local
 
 # Android/IntelliJ
 #
 build/
+.cxx/
 .idea
 .gradle
 local.properties
@@ -39,7 +41,11 @@ node_modules/
 npm-debug.log
 yarn-error.log
 package-lock.json
-pnpm-lock.yaml
+
+yarn.lock
+.pnp.*
+.yarn/*
+!.yarn/patches
 
 # BUCK
 buck-out/
